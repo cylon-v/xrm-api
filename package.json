@@ -1,6 +1,6 @@
 {
   "name": "xrm-api",
-  "version": "2.1.5",
+  "version": "3.0.0",
   "description": "Module that allows to invoke Microsoft Dynamics CRM services",
   "author": "Kidozen <development@kidozen.com>",
   "contributors": [
@@ -19,11 +19,15 @@
     {
       "name": "Alexey Shytikov",
       "email": "alexey.shytikov@innofactor.com"
+    },
+    {
+      "name": "Vladimir Kalinkin",
+      "email": "vova.kalinkin@gmail.com"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/Innofactor/xrm-api.git"
+    "url": "git+ssh://git@github.com/cylon-v/xrm-api"
   },
   "main": "index.js",
   "scripts": {

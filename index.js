@@ -1,56 +1,45 @@
-/*
-* Module's dependencies
-*/
-var Util    = require('./lib/util.js');
-var Message = require('./lib/message.js');
+import Util from './util';
+import Message from './message';
 
-var Dynamics = function (settings) {
-    "use strict";
+export class Dynamics {
+  constructor(settings) {
+    const util = new Util(settings);
+    this.message = new Message(util);
+  }
 
-    // creates an instance of class that handles all requests
-    var util = new Util(settings);
-    var message = new Message(util);
+  create(options) {
+    return this.message.Create(options);
+  }
 
-    // this.authenticate = function (options, cb) {
-    //     util.Authenticate(options, cb);
-    // };
+  update(options) {
+    return this.message.Update(options);
+  }
 
-    // // Compatibiliy backwards
-    // this.Authenticate = function (options, cb) {
-    //     util.Authenticate(options, cb);
-    // };
-    
-    this.Create = function (options) {
-        return message.Create(options);
-    };
+  retrieve(options) {
+    return this.message.Retrieve(options);
+  }
 
-    this.Update = function (options) {
-        return message.Update(options);
-    };
+  retrieveMultiple(options) {
+    return this.message.RetrieveMultiple(options);
+  }
 
-    this.Retrieve = function (options) {
-        return message.Retrieve(options);
-    };
+  associate(options) {
+    return this.message.Associate(options);
+  }
 
-    this.RetrieveMultiple = function (options) {
-        return message.RetrieveMultiple(options);
-    };
+  disassociate(options) {
+    return this.message.Disassociate(options);
+  }
 
-    this.Associate = function (options) {
-        return message.Associate(options);
-    };
+  execute(options) {
+    return this.message.Execute(options);
+  }
 
-    this.Disassociate = function (options) {
-        return message.Disassociate(options);
-    };
+  executeSetState(options) {
+    return this.message.ExecuteSetState(options);
+  }
 
-    this.Execute = function (options) {
-        return message.Execute(options);
-    };
-
-    this.Delete = function (options) {
-        return message.Delete(options);
-    };
-};
-
-module.exports = Dynamics;
+  delete(options) {
+    return this.message.Delete(options);
+  }
+}

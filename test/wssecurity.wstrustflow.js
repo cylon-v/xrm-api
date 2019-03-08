@@ -2,7 +2,7 @@
 
 var assert = require('assert');
 var fs = require('fs');
-var WSTrustFlow = require('../lib/ws-security/wsTrustFlow.js');
+var WSTrustFlow = require('../lib/auth/strategies/ws-security/wsTrustFlow.js');
 
 
 describe('wssecurity.wstrustflow', function () {
